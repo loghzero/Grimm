@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hollow Knight</title>
 
-    <!-- Conecta o CSS externo -->
+    <!-- TODO: Conecta o CSS externo -->
     <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
 
     <div class="container">
 
         <header>
-            <h1>Hollow Knight</h1>
-            <p>Explore os mistérios de Hallownest</p>
+            <div class="logo">
+                <img src="img/knight icon.jpg" alt="" class="knight">
+
+                <div class="texto">
+                    <h1>Hollow Knight</h1>
+                    <p class="subtitulo">Explore os mistérios de Hallownest</p>
+                </div>
+            </div>
         </header>
 
         <main>
 
             <section class="card">
+                <!-- TODO: section é quase como uma div, mas ela descreve o conteudo a não só a aparecncia, ela é uma sessão de um assunto dentro do meu site-->
                 <h2>Sobre o jogo</h2>
 
                 <p>
-                    Hollow Knight é um jogo de ação e aventura em estilo
-                    metroidvania. O jogador explora um reino subterrâneo
-                    chamado Hallownest enfrentando inimigos, descobrindo
-                    segredos e adquirindo novas habilidades.
+                    Hollow Knight é um jogo de ação e aventura no estilo metroidvania,
+                    ambientado em Hallownest, um antigo reino subterrâneo que caiu em
+                    ruína após ser consumido por uma misteriosa infecção. O jogador controla
+                    um pequeno cavaleiro que viaja por esse mundo decadente para descobrir sua
+                    origem e os segredos por trás da praga que devastou e consumiu seus habitantes.
+                    Ao longo da jornada, exploramos cavernas, cidades abandonadas e ruínas antigas,
+                    enfrentando inimigos enquanto descobrimos os segredos de uma civilização caída.
                 </p>
             </section>
 
@@ -34,20 +46,31 @@
                 <h2>Características</h2>
 
                 <ul>
-                    <li>Mapa enorme para explorar</li>
-                    <li>Chefes desafiadores</li>
-                    <li>Arte desenhada à mão</li>
-                    <li>Trilha sonora incrível</li>
+                    <li>Mapa de Hallownest</li>
+                    <li>Boss Fights</li>
+                    <li>Arte Hand-Drawn</li>
+                    <li>Trilha Sonora</li>
                 </ul>
             </section>
 
         </main>
 
-        <footer>
-            <p>Projeto de estudos HTML e CSS</p>
+        <footer> <!-- TODO: TAG usada para criar rodapes de paginas-->
+            <img src="img/Icon.jpg" alt="icon" class="icon">
+            <div class="info">
+                <p class="autor">Murillo Mafioletti Viola</p>
+                <a class="instagram" href="https://www.instagram.com/m.mafioletti/" target="_blank"
+                    rel="noopener noreferrer">
+                    @m.mafioletti
+                </a>
+            </div>
+            <!-- TODO: referente a tag <a>: target="_blank" faz com que o link seja aberto em outra janela
+<!-- TODO: rel="noopener noreferrer" deixa o link mais seguro quando aberto em outra aba, pq vai impedir que 
+<!-- TODO: a nova página (Instagram) tenha acesso ao seu site via JavaScript-->
         </footer>
 
     </div>
 
 </body>
+
 </html>
