@@ -49,9 +49,10 @@ body {
         linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)), /*TODO ele cria um degrade, mas como eu coloquei duas cores iguais, ele cria uma camada uniforme encima do background */
         url("img/background.png");                                          /*TODO é tipo background-color: rgba(17, 24, 39, 0.7); mas nesse caso, ele ficaria atraz da imagem*/
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-size: cover;             /*! -> faz a imagem cobrir a tela td */
+    background-position: center;        /*! -> posiciona a imagem no meio */
+    background-repeat: no-repeat;       /*! -> faz a imagem noa se repitir, isso acontece por padrão*/
+    background-attachment: fixed;       /*! -> deixa a imagem fixa / estatica*/
 }
 
 /* Bloco central */
