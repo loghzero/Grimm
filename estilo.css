@@ -5,15 +5,18 @@
     box-sizing: border-box;
 }
 
-.logo {
-    display: flex;
-    /* faz a imagem e o titulo ficar lado a lado */
-    align-items: center;
-    /* ficam centralizadas */
-    justify-content: center;
-    /* centraliza horizontalmente */
-    gap: 15px;
-    /* cria um espeço entre elas */
+/*.logo {
+    display: flex;              -> faz a imagem e o titulo ficar lado a lado 
+    align-items: center;        -> ficam centralizadas 
+    justify-content: center;    -> centraliza horizontalmente 
+    gap: 15px;                  -> cria um espeço entre elas
+    
+} */
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
 }
 
 .texto {
@@ -35,14 +38,16 @@ html {
 }
 
 body {
-    min-height: 100vh;
-
-    color: white;
+    min-height: 100vh;  /*? essa valor significa que o conteudo ocupara td a altura da tela */
+    min-height: 100dvh;  /*? entao se a tela tem 1920 x 1080, o conteudo ocupara a altura de 1080 */
+                        /*? min-height faz com que a altura mínima será a altura da tela, mas pode crescer se houver mais conteúdo. */
+                        /*? eu nao usava ele, por isso minha tela ficava com aquela parte branca na parte inferior, eu nao tinha conteudo suficiente para preencher a tela td */
+    color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
 
     background:
-        linear-gradient(rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 0.7)),
-        url("img/background.png");
+        linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)), /*TODO ele cria um degrade, mas como eu coloquei duas cores iguais, ele cria uma camada uniforme encima do background */
+        url("img/background.png");                                          /*TODO é tipo background-color: rgba(17, 24, 39, 0.7); mas nesse caso, ele ficaria atraz da imagem*/
 
     background-size: cover;
     background-position: center;
