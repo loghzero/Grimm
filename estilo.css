@@ -5,14 +5,20 @@
     box-sizing: border-box;
 }
 
-/*.logo {
-    display: flex;              -> faz a imagem e o titulo ficar lado a lado 
-    align-items: center;        -> ficam centralizadas 
-    justify-content: center;    -> centraliza horizontalmente 
-    gap: 15px;                  -> cria um espeço entre elas
-    
-} */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
 
+    .logo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 10rem;
+    }
+}
 
 .texto {
     display: flex;
