@@ -30,11 +30,23 @@
     /* aumenta a distância para baixo */
 }
 
-/* Corpo da página */
+html {
+    min-height: 100%;
+}
+
 body {
-    background-color: #111827;
+    min-height: 100vh;
+
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        linear-gradient(rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 0.7)),
+        url("img/backgroud.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Bloco central */
