@@ -83,6 +83,10 @@ body {
     object-fit: cover
 }
 
+.knight:hover {
+    scale: 1.1;
+}
+
 /* Cabeçalho */
 header {
     text-align: center;
@@ -169,7 +173,7 @@ footer {
     align-items: center;
 }
 
-.boss {
+.boss {                                 /*isso configura o span, no caso os chefes do hollow knight -> o hover ali embaixo configura a interação com o mouse*/
     position: relative;
     color: #ffffff;
     cursor: pointer;
@@ -195,3 +199,5 @@ footer {
 .boss:hover img {                           /*! -> basicamente fala oq vai acontecer quando o mouse passar encima*/
     opacity: 1;
 }
+
+/* boss img é configuraçao de tds as imagens que estao dentros dos spans, como cada span tem uma imagen diferente nao é necessario um class para cada imagem*/
