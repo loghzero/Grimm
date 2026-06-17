@@ -19,6 +19,19 @@
     }
 }*/
 
+.sub-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.Grimm {
+    width: 20%;
+    height: 20%;
+    object-fit: cover
+}
+
 .texto {
     display: flex;
     flex-direction: column;
@@ -154,4 +167,31 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.boss {
+    position: relative;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.boss:hover {
+    color: #e1306c;
+}
+
+.boss img {
+    position: absolute;                     /*! -> faz a imagem sair do fluxo normal da pagina, ela meio que flutua sobre a pagina, dai quando ela aparecer ela noa empurra o texto*/
+    width: 300px;                           
+    bottom: 30px;                           /*! -> faz ela ficar 30 px em cima do elemnto pia, ou seja, o nome do boss*/
+    left: 50%;                              /*! -> */
+    transform: translateX(-50%);            /*! -> deixa a imagem perfeitamnete centralizada*/
+    opacity: 0;                             /*! -> deixa a imagem invisivel*/
+    transition: 0.3s;                       
+    pointer-events: none;                   /*! -> nao deixa a imagem interagir com o mouse*/
+    border: 3px solid #e1306c ;
+}
+
+.boss:hover img {                           /*! -> basicamente fala oq vai acontecer quando o mouse passar encima*/
+    opacity: 1;
 }
