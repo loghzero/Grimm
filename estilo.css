@@ -83,10 +83,6 @@ body {
     object-fit: cover
 }
 
-.knight:hover {
-    scale: 1.1;
-}
-
 /* Cabeçalho */
 header {
     text-align: center;
