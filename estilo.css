@@ -55,11 +55,11 @@ body {
 
     background:
         linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)), /*TODO ele cria um degrade, mas como eu coloquei duas cores iguais, ele cria uma camada uniforme encima do background */
-        url("img/background.png");                                          /*TODO é tipo background-color: rgba(17, 24, 39, 0.7); mas nesse caso, ele ficaria atraz da imagem*/
+        url("img/Background.webp");                                          /*TODO é tipo background-color: rgba(17, 24, 39, 0.7); mas nesse caso, ele ficaria atraz da imagem*/
 
     background-size: cover;             /*! -> faz a imagem cobrir a tela td */
     background-position: center;        /*! -> posiciona a imagem no meio */
-    background-repeat: no-repeat;       /*! -> faz a imagem noa se repitir, isso acontece por padrão*/
+    background-repeat: no-repeat;       /*! -> faz a imagem não se repitir, isso acontece por padrão*/
     background-attachment: fixed;       /*! -> deixa a imagem fixa / estatica*/
 }
 
@@ -192,3 +192,9 @@ footer {
 }
 
 /* boss img é configuraçao de tds as imagens que estao dentros dos spans, como cada span tem uma imagen diferente nao é necessario um class para cada imagem*/
+
+.mapa {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
