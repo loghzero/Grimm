@@ -1,201 +1,234 @@
-/* Remove margens padrão do navegador */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {                                 /* Seleciona TODOS os elementos da página */
+    margin: 0;                      /* Remove todas as margens padrão dos elementos */
+    padding: 0;                     /* Remove todos os espaçamentos internos padrão */
+    box-sizing: border-box;         /* Faz com que width e height incluam padding e border no cálculo do tamanho */
 }
 
-.logo {
+.Logo {
     display: flex;              /*-> faz a imagem e o titulo ficar lado a lado*/ 
     align-items: center;        /*-> ficam centralizadas*/ 
     justify-content: center;    /*-> centraliza horizontalmente*/
     gap: 15px;                  /*-> cria um espeço entre elas*/
-    
 } 
 
 
-.sub-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
+.Sub-card {
+    display: flex;                  /* Coloca os elementos filhos lado a lado em uma linha */
+    align-items: center;            /* Alinha os elementos ao centro na vertical */
+    justify-content: space-between; /* Distribui os elementos, deixando o máximo de espaço entre eles */
 }
 
 .Grimm {
-    width: 20%;
-    height: 20%;
-    object-fit: cover
+    width: 20%;              /* Define a largura da imagem como 20% do tamanho do elemento pai */
+    height: 20%;             /* Define a altura da imagem como 20% do tamanho do elemento pai */
+    object-fit: cover;       /* Faz a imagem preencher a área definida sem distorcer, cortando partes se necessário */
 }
 
-.texto {
-    display: flex;
-    flex-direction: column;
+.Texto {
+    display: flex;            /* Ativa o Flexbox para organizar os elementos internos */
+    flex-direction: column;   /* Organiza os elementos em coluna (um embaixo do outro) */
 }
 
-.texto h1 {
-    margin: 0;
-}
+.Texto h1 {
+    margin: 0;    /* Remove todas as margens padrão do título <h1> (A distancia do <h1> para o <p>)*/
+} 
 
-.subtitulo {
-    margin-top: 10px;
-    /* aumenta a distância para baixo */
+.Subtitulo {
+    margin-top: 5px;    /* Adiciona uma margem de 10px acima do elemento, criando espaço em relação ao item superior. Nesse caso, ela esta substituindo a margem que o h1 teria por padrão */
 }
 
 html {
-    min-height: 100%;
+    min-height: 100%;    /* Define que a altura mínima da página será 100% da altura da janela do navegador, muito usado quando uma pagina web possui pouco conteúdo */
 }
 
 body {
-    min-height: 100vh;  /*? essa valor significa que o conteudo ocupara td a altura da tela */
-    min-height: 100dvh;  /*? entao se a tela tem 1920 x 1080, o conteudo ocupara a altura de 1080 */
-                        /*? min-height faz com que a altura mínima será a altura da tela, mas pode crescer se houver mais conteúdo. */
-                        /*? eu nao usava ele, por isso minha tela ficava com aquela parte branca na parte inferior, eu nao tinha conteudo suficiente para preencher a tela td */
+    min-height: 100vh;      /* essa valor significa que o conteudo ocupara td a altura da tela */
+    min-height: 100dvh;     /* entao se a tela tem 1920 x 1080, o conteudo ocupara a altura de 1080 */
+                            /* min-height faz com que a altura mínima será a altura da tela, mas pode crescer se houver mais conteúdo. */
+                            /* eu nao usava ele, por isso minha tela ficava com aquela parte branca na parte inferior, eu nao tinha conteudo suficiente para preencher a tela td */
+
     color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
 
     background:
-        linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)), /*TODO ele cria um degrade, mas como eu coloquei duas cores iguais, ele cria uma camada uniforme encima do background */
-        url("img/Background.webp");                                          /*TODO é tipo background-color: rgba(17, 24, 39, 0.7); mas nesse caso, ele ficaria atraz da imagem*/
+        linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)),   /* ele cria um degrade, mas como eu coloquei duas cores iguais, ele cria uma camada uniforme encima do background */
+        url("img/Background.webp");                                          /* é tipo background-color: rgba(17, 24, 39, 0.7); mas nesse caso, ele ficaria atraz da imagem*/
 
-    background-size: cover;             /*! -> faz a imagem cobrir a tela td */
-    background-position: center;        /*! -> posiciona a imagem no meio */
-    background-repeat: no-repeat;       /*! -> faz a imagem não se repitir, isso acontece por padrão*/
-    background-attachment: fixed;       /*! -> deixa a imagem fixa / estatica*/
+    background-size: cover;          /* Faz a imagem de fundo cobrir toda a área do elemento, podendo cortar partes da imagem */
+    background-position: center;     /* Centraliza a imagem de fundo horizontal e verticalmente */
+    background-repeat: no-repeat;    /* Impede que a imagem de fundo se repita para preencher o espaço */
+    background-attachment: fixed;    /* Mantém o fundo fixo na tela enquanto o usuário rola a página */
+                                     /* As 4 linhas a cima geram um efeito vizual chamado parallax simples */
 }
 
 /* Bloco central */
-.container {
-    width: 80%;
-    max-width: 900px;
-    margin: 40px auto;
+.Container {
+    width: 80%;           /* Define a largura do container como 80% da largura do elemento pai (body), deixando ele responsivo */
+    max-width: 900px;     /* Limita a largura máxima a 900px, mesmo em telas muito grandes */
+    margin: 40px auto;    /* Adiciona 40px de margem em cima e embaixo, e centraliza horizontalmente */
 }
 
-.knight {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 4px solid white;
-    object-fit: cover
+.Knight {
+    width: 100px;                /* Define a largura da imagem em 100 pixels */
+    height: 100px;               /* Define a altura da imagem em 100 pixels */
+    border-radius: 50%;          /* Transforma a imagem em um círculo ao arredondar totalmente os cantos */
+    border: 3px solid white;   /* Cria uma borda branca de 4px ao redor da imagem */
+    object-fit: cover;           /* Faz a imagem preencher todo o espaço sem deformar, cortando partes se necessário */
 }
 
 /* Cabeçalho */
 header {
-    text-align: center;
-    margin-bottom: 30px;
+    text-align: center;    /* Centraliza horizontalmente os textos e elementos inline dentro do header */
+    margin-bottom: 30px;   /* Adiciona um espaço de 30px abaixo do header */
 }
 
 header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: 3rem;       /* Define o tamanho da fonte como 3 vezes o tamanho da fonte raiz (html). Tamanho normal: 16px * 3 = 48px */
+    margin-bottom: 10px;   /* Adiciona um espaço de 10px abaixo do título */
 }
 
 header p {
-    color: #cbd5e1;
+    color: #cbd5e1;    /* Define a cor do texto dos parágrafos dentro do header */
 }
 
 /* Cards */
-.card {
-    background-color: #1f2937;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
+.Card {
+    background-color: #263344;  /* Define a cor de fundo do card */
+    padding: 20px;                /* Adiciona um espaçamento interno de 20px entre o conteúdo e as bordas */
+    margin-bottom: 20px;          /* Cria um espaço de 20px abaixo do card */
+    border-radius: 10px;          /* Arredonda os cantos do card em 10px */
 }
 
-.card h2 {
-    margin-bottom: 10px;
+.Card h2 {
+    margin-bottom: 10px;    /* Adiciona um espaço de 10px abaixo do título <h2>, separando-o do conteúdo seguinte */
 }
 
-.card p,
-.card li {
-    line-height: 1.6;
+.Card p,              /* Seleciona todos os parágrafos (<p>) dentro de elementos com a classe .Card */
+.Card li {            /* Seleciona todos os itens de lista (<li>) dentro de elementos com a classe .Card */
+    line-height: 1.6; /* Define a altura de cada linha do texto em 1,6 vezes o tamanho da fonte, melhorando a legibilidade */
 }
 
-.card ul {
-    padding-left: 20px;
+.Card ul {
+    padding-left: 20px;    /* Adiciona um espaçamento interno de 20px à esquerda da lista, afastando os marcadores da borda. Esse espaço foi removido no inicio do nosso codigo ("padding: 0;"), então estamos apenas devolvendo ele */
 }
 
-.icon {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 4px solid rgb(37, 7, 22);
-    object-fit: cover
+.Icon {
+    width: 100px;                          /* Define a largura da imagem em 100 pixels */
+    height: 100px;                         /* Define a altura da imagem em 100 pixels */
+    border-radius: 50%;                    /* Arredonda totalmente os cantos, transformando a imagem em um círculo */
+    border: 4px solid rgb(37, 7, 22);    /* Cria uma borda de 4px */
+    object-fit: cover;                     /* Faz a imagem preencher todo o espaço sem deformar, cortando partes se necessário */
 }
 
 /* Rodapé */
-.autor {
-    margin-top: 30px;
-    color: #94a3b8;
-    font-weight: 500;
-    transition: 0.3s;
+.Autor {
+    margin-top: 30px;      /* Cria um espaço de 30px acima do elemento */
+    color: #94a3b8;      /* Define a cor do texto para um tom de cinza-azulado claro */
+    font-weight: 500;      /* Define a espessura da fonte como média (mais forte que o normal) */
+    transition: 0.3s;      /* Aplica uma transição suave de 0,3 segundos em mudanças de propriedades */
 }
 
-.autor:hover {
-    color: #e1306c;
-    scale: 1.1;
+.Autor:hover {
+    color: #e1306c;    /* Altera a cor do texto quando o mouse passa sobre o elemento */
+    scale: 1.1;          /* Aumenta o tamanho do elemento para 110% do tamanho original */
 }
 
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
+    display: flex;              /* Ativa o Flexbox, permitindo organizar os elementos de forma flexível */
+    align-items: center;        /* Centraliza os elementos na vertical dentro do footer */
+    justify-content: center;    /* Centraliza os elementos na horizontal dentro do footer */
+    gap: 15px;                  /* Cria um espaço de 15px entre os elementos filhos */
 }
 
-.instagram {
-    text-decoration: none;
-    /* ? remove qualquer efeito sobre o texto, nesse caso o efeito que ele tinha por ser um link */
-    color: #94a3b8;
-    font-weight: 500;
-    /* ? dependendo do valor deixa o texto em negrito */
-    transition: 0.3s;
-    /* ? cria uma animação para as carcteristicas definidas, entao nesse caso demora 0.3s para o texto mudar de cor */
-}
+.Instagram {
+    text-decoration: none;   /* Remove decorações do texto, como o sublinhado dos links */
+    color: #94a3b8;        /* Define a cor do texto */
+    font-weight: 500;        /* Define uma espessura média para a fonte */
+    transition: 0.3s;        /* Faz mudanças de propriedades ocorrerem em 0,3 segundos */
+}  
 
-.instagram:hover {
-    color: #e1306c;
-    scale: 1.1;
+.Instagram:hover {
+    color: #e1306c;    /* Altera a cor do texto quando o mouse passa sobre o elemento */
+    scale: 1.1;          /* Aumenta o tamanho do elemento para 110% do tamanho original */
 }
 
 
-.info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.Info {
+    display: flex;            /* Ativa o Flexbox para organizar os elementos internos */
+    flex-direction: column;   /* Organiza os elementos em coluna (um abaixo do outro) */
+    align-items: center;      /* Centraliza os elementos horizontalmente dentro do container */
 }
 
-.boss {                                 /*isso configura o span, no caso os chefes do hollow knight -> o hover ali embaixo configura a interação com o mouse*/
-    position: relative;
-    color: #ffffff;
-    cursor: pointer;
-    transition: 0.3s;
+.Boss {                                  /* Configura os elementos da classe .Boss (no caso, os nomes dos chefes em <span>) */
+    position: relative;                  /* Define o próprio elemento como referência para posicionamentos absolutos internos (nomes dos chefes) */
+    color: #ffffff;                    /* Define a cor do texto */
+    cursor: pointer;                     /* Faz o cursor virar uma "mãozinha", indicando que o elemento é interativo */
+    transition: 0.3s;                    /* Aplica uma transição de 0,3 segundos nas propriedades que mudarem */
 }
 
-.boss:hover {
-    color: #e1306c;
+.Boss:hover {
+    color: #e1306c;    /* Altera a cor do texto para rosa quando o mouse passa sobre o elemento */
 }
 
-.boss img {
-    position: absolute;                     /*! -> faz a imagem sair do fluxo normal da pagina, ela meio que flutua sobre a pagina, dai quando ela aparecer ela noa empurra o texto*/
-    width: 300px;                           
-    bottom: 30px;                           /*! -> faz ela ficar 30 px em cima do elemnto pia, ou seja, o nome do boss*/
-    left: 50%;                              /*! -> */
-    transform: translateX(-50%);            /*! -> deixa a imagem perfeitamnete centralizada*/
-    opacity: 0;                             /*! -> deixa a imagem invisivel*/
-    transition: 0.3s;                       
-    pointer-events: none;                   /*! -> nao deixa a imagem interagir com o mouse*/
-    border: 3px solid #e1306c ;
+.Boss img {
+    position: absolute;               /* Remove a imagem do fluxo normal e permite posicioná-la a cima de outros elementos */
+    width: 400px;                     /* Define a largura da imagem em 300 pixels */
+    bottom: 30px;                     /* Posiciona a imagem 30px acima da parte inferior do elemento .Boss */
+    left: 50%;                        /* Move o início da imagem para o centro horizontal do elemento pai */
+    transform: translateX(-50%);      /* Corrige o alinhamento, centralizando a imagem perfeitamente */
+    opacity: 0;                       /* Deixa a imagem totalmente invisível inicialmente */
+    transition: 0.3s;                 /* Faz mudanças visuais ocorrerem em 0,3 segundos */
+    pointer-events: none;             /* Impede que a imagem receba cliques ou eventos do mouse */
+    border: 3px solid #e1306c;      /* Cria uma borda de 3px ao redor da imagem */
 }
 
-.boss:hover img {                           /*! -> basicamente fala oq vai acontecer quando o mouse passar encima*/
-    opacity: 1;
+.Boss:hover img {
+    opacity: 1;    /* Torna a imagem visível quando o mouse passa sobre o elemento .Boss */
 }
 
-/* boss img é configuraçao de tds as imagens que estao dentros dos spans, como cada span tem uma imagen diferente nao é necessario um class para cada imagem*/
+/*! Boss img é configuraçao de tds as imagens que estao dentros dos spans, como cada span tem uma imagen diferente, então nao é necessario um class para cada imagem*/
 
-.mapa {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    border: 2px solid #e1306c;
+.Mapa {
+    width: 100%;                    /* Faz a imagem ocupar 100% da largura disponível do elemento pai */
+    height: auto;                   /* Ajusta a altura automaticamente para manter as proporções originais da imagem */
+    border-radius: 10px;            /* Arredonda os cantos da imagem em 10px */
+    border: 2px solid #e1306c;    /* Cria uma borda de 2px ao redor da imagem */
+}
+
+.Location {                              /* Configura os elementos da classe .Location (no caso, os nomes das localizações em <span>) */
+    position: relative;                  /* Define o próprio elemento como referência para posicionamentos absolutos internos (nomes das localizações) */
+    color: #ffffff;                    /* Define a cor do texto */
+    cursor: pointer;                     /* Faz o cursor virar uma "mãozinha", indicando que o elemento é interativo */
+    transition: 0.3s;                    /* Aplica uma transição de 0,3 segundos nas propriedades que mudarem */
+}
+
+.Location:hover {
+    color: #e1306c;    /* Altera a cor do texto para rosa quando o mouse passa sobre o elemento .Location */
+}
+
+.Location img {
+    position: absolute;               /* Remove a imagem do fluxo normal e permite posicioná-la a cima de outros elementos */
+    width: 400px;                     /* Define a largura da imagem em 200 pixels */
+    bottom: 30px;                     /* Posiciona a imagem 30px acima da parte inferior do elemento .Location */
+    left: 50%;                        /* Move o início da imagem para o centro horizontal do elemento pai */
+    transform: translateX(-50%);      /* Corrige o alinhamento, centralizando a imagem perfeitamente */
+    opacity: 0;                       /* Deixa a imagem totalmente invisível inicialmente */
+    transition: 0.3s;                 /* Faz mudanças visuais ocorrerem em 0,3 segundos */
+    pointer-events: none;             /* Impede que a imagem receba cliques ou eventos do mouse */
+    border: 3px solid #e1306c;      /* Cria uma borda de 2px ao redor da imagem */
+}
+
+.Location:hover img {
+    opacity: 1;    /* Torna a imagem visível quando o mouse passa sobre o elemento .Location */
+}
+
+.Trilha {
+    text-decoration: none;   /* Remove decorações do texto, como o sublinhado dos links */
+    color: #94a3b8;        /* Define a cor do texto */
+    font-weight: 500;        /* Define uma espessura média para a fonte */
+    transition: 0.3s;        /* Faz mudanças de propriedades ocorrerem em 0,3 segundos */
+}  
+
+.Trilha:hover {
+    color: #e1306c;    /* Altera a cor do texto quando o mouse passa sobre o elemento */
 }
