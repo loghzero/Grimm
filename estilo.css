@@ -16,6 +16,7 @@
     display: flex;                  /* Coloca os elementos filhos lado a lado em uma linha */
     align-items: center;            /* Alinha os elementos ao centro na vertical */
     justify-content: space-between; /* Distribui os elementos, deixando o máximo de espaço entre eles */
+    text-decoration: none;             /* Remove sublinhados de links e outras decorações de texto */
 }
 
 .Grimm {
@@ -39,6 +40,7 @@
 
 html {
     min-height: 100%;    /* Define que a altura mínima da página será 100% da altura da janela do navegador, muito usado quando uma pagina web possui pouco conteúdo */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -161,7 +163,7 @@ footer {
 
 .Boss {                                  /* Configura os elementos da classe .Boss (no caso, os nomes dos chefes em <span>) */
     position: relative;                  /* Define o próprio elemento como referência para posicionamentos absolutos internos (nomes dos chefes) */
-    color: #ffffff;                    /* Define a cor do texto */
+    color: #94a3b8;                    /* Define a cor do texto */
     cursor: pointer;                     /* Faz o cursor virar uma "mãozinha", indicando que o elemento é interativo */
     transition: 0.3s;                    /* Aplica uma transição de 0,3 segundos nas propriedades que mudarem */
 }
@@ -189,15 +191,25 @@ footer {
 /*! Boss img é configuraçao de tds as imagens que estao dentros dos spans, como cada span tem uma imagen diferente, então nao é necessario um class para cada imagem*/
 
 .Mapa {
-    width: 100%;                    /* Faz a imagem ocupar 100% da largura disponível do elemento pai */
-    height: auto;                   /* Ajusta a altura automaticamente para manter as proporções originais da imagem */
-    border-radius: 10px;            /* Arredonda os cantos da imagem em 10px */
-    border: 2px solid #e1306c;    /* Cria uma borda de 2px ao redor da imagem */
+    display: block;                     /* Faz a imagem se comportar como um elemento de bloco, ocupando uma linha inteira */
+    width: 100%;                        /* Faz a imagem ocupar 100% da largura disponível do elemento pai */
+    max-width: 700px;                   /* Define que a imagem pode crescer até no máximo 700px de largura */
+    margin: 20px auto 15px;             /* Adiciona 20px de margem em cima, centraliza horizontalmente e 15px embaixo */
+    border-radius: 12px;                /* Arredonda os cantos da imagem em 12px */
+    border: 3px solid #263344;        /* Cria uma borda de 3px */
+    box-shadow: 0 8px 25px #222121;   /* Adiciona uma sombra ao redor da imagem para dar profundidade */
+    transition: 0.3s;                   /* Faz mudanças visuais acontecerem em 0,3 segundos */
 }
+
+.Mapa:hover {
+    transform: scale(1.02);             /* Aumenta levemente a imagem para 102% do tamanho original ao passar o mouse */
+    box-shadow: 0 12px 30px #000000;  /* Deixa a sombra mais forte e mais profunda durante o hover */
+}
+
 
 .Location {                              /* Configura os elementos da classe .Location (no caso, os nomes das localizações em <span>) */
     position: relative;                  /* Define o próprio elemento como referência para posicionamentos absolutos internos (nomes das localizações) */
-    color: #ffffff;                    /* Define a cor do texto */
+    color: #94a3b8;                    /* Define a cor do texto */
     cursor: pointer;                     /* Faz o cursor virar uma "mãozinha", indicando que o elemento é interativo */
     transition: 0.3s;                    /* Aplica uma transição de 0,3 segundos nas propriedades que mudarem */
 }
@@ -227,8 +239,13 @@ footer {
     color: #94a3b8;        /* Define a cor do texto */
     font-weight: 500;        /* Define uma espessura média para a fonte */
     transition: 0.3s;        /* Faz mudanças de propriedades ocorrerem em 0,3 segundos */
+    display: inline-block;    /* Permite que o elemento seja tratado como um bloco, mas ainda se comporte como um link */
 }  
+
+/*! tive bastante dificuldade com essa parte, por ser um link o scale nao estava funcionando, por isso sempre tem que colocar o display: inline-block */
 
 .Trilha:hover {
     color: #e1306c;    /* Altera a cor do texto quando o mouse passa sobre o elemento */
+    scale: 1.02;          /* Aumenta o tamanho do elemento para 102% do tamanho original */
 }
+
