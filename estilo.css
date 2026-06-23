@@ -16,7 +16,6 @@
     display: flex;                  /* Coloca os elementos filhos lado a lado em uma linha */
     align-items: center;            /* Alinha os elementos ao centro na vertical */
     justify-content: space-between; /* Distribui os elementos, deixando o máximo de espaço entre eles */
-    text-decoration: none;             /* Remove sublinhados de links e outras decorações de texto */
 }
 
 .Grimm {
@@ -229,6 +228,7 @@ footer {
     pointer-events: none;             /* Impede que a imagem receba cliques ou eventos do mouse */
     border: 3px solid #e1306c;      /* Cria uma borda de 2px ao redor da imagem */
 }
+
 
 .Location:hover img {
     opacity: 1;    /* Torna a imagem visível quando o mouse passa sobre o elemento .Location */
